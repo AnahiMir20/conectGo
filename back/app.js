@@ -2,13 +2,12 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 const sequelize = require('./back/db/conexion');
-//const frontView = require('./back/views/indexView');
-//const loginView = require('./back/views/loginView');
-// const studiesView = require('./back/views/studiesView');
-// const languagesView = require('./back/views/languagesView');
-// const hobbiesView = require('./back/views/hobbiesView');
-// const pictureView = require('./back/views/pictureView');
-// const friendsView = require('./back/views/friendsView');
+const loginView = require('./back/views/loginView');
+const studiesView = require('./back/views/studiesView');
+const idiomsView = require('./back/views/idiomsView');
+const hobbiesView = require('./back/views/hobbiesView');
+const pictureView = require('./back/views/pictureView');
+const friendsView = require('./back/views/friendsView');
 const app = express();
 
 
@@ -32,10 +31,9 @@ async function serverStart() {
 
 serverStart();
 
-// frontView(app);
-// loginView(app);
-// studiesView(app);
-// languagesView(app);
-// hobbiesView(app);
-// pictureView(app);
-// friendsView(app)
+loginView(app);
+studiesView(app);
+idiomsView(app);
+hobbiesView(app);
+pictureView(app);
+friendsView(app)
